@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Post
-from django.contrib.auth.forms import UserCreationForm
 
 
 def home(request):
@@ -16,11 +15,3 @@ def about(request):
         'title': 'About'
     }
     return render(request, 'blog/about.html', context=context)
-
-
-def register(request):
-    form = UserCreationForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'users/register.html', context=context)
