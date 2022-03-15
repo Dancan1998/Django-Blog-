@@ -11,6 +11,7 @@ class Post(models.Model):
 
     class Meta:
         db_table = 'post'
+        ordering = ['-date_posted']
 
     def __str__(self):
         return self.title
